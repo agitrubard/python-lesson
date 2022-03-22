@@ -33,18 +33,18 @@ else:
 
 # --------------
 
-helloWorldMessage = "Hello World!"
+hello_world_message = "Hello World!"
 
-print(helloWorldMessage)
+print(hello_world_message)
 
-helloMessage = "Hello"
+hello_message = "Hello"
 
-print(helloMessage)
+print(hello_message)
 
-worldMessage = "World"
+world_message = "World"
 
-print(worldMessage)
+print(world_message)
 
-helloWorldMessage2 = helloMessage + " " + worldMessage + "!"
+hello_world_message2 = hello_message + " " + world_message + "!"
 
-print(helloWorldMessage2)
+print(hello_world_message2)
