@@ -1,3 +1,5 @@
+# SORU : BU EVİ, BU BİRİKİMLE KAÇ AYDA VE YILDA ALABİLİRSİNİZ
+
 annual_sallary = float(input("Yıllık Maaşınızı Yazınız : ₺"))
 total_cost = float(input("Hayalinizdeki Evin Değerini Giriniz : ₺"))
 portion_saved = float(input("Maaşınızın Ne Kadarlık Kısmını Biriktireceksiniz : ₺"))
