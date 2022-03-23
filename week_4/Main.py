@@ -1,3 +1,6 @@
+# SORU : BU EVİ 3 YILDA ALABİLMEMİZ İÇİN
+# BİR AYDA NE KADAR PARA BİRİKTİRMEMİZ GEREKİYOR
+
 # annual_sallary = float(input("Yıllık Maaşınızı Yazınız : ₺"))
 # total_cost = float(input("Hayalinizdeki Evin Değerini Giriniz : ₺"))
 # portion_saved = float(input("Maaşınızın Ne Kadarlık Kısmını Biriktireceksiniz : "))
@@ -34,3 +37,8 @@ while 1 > 0:
         break
 
     month += 1
+
+year = 3
+total_month = year * 12
+month_saving = portion_down_payment / total_month
+print("\nBu Evi 3 Yılda Alabilmeniz İçin Aylık Biriktirmeniz Gereken Miktar : ₺{}".format(month_saving))
