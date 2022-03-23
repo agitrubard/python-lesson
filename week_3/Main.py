@@ -1,10 +1,12 @@
-annual_sallary = float(input("Yıllık Maaşınızı Yazınız : ₺"))
-total_cost = float(input("Hayalinizdeki Evin Değerini Giriniz : ₺"))
-portion_saved = float(input("Maaşınızın Ne Kadarlık Kısmını Biriktireceksiniz : ₺"))
+# annual_sallary = float(input("Yıllık Maaşınızı Yazınız : ₺"))
+# total_cost = float(input("Hayalinizdeki Evin Değerini Giriniz : ₺"))
+# portion_saved = float(input("Maaşınızın Ne Kadarlık Kısmını Biriktireceksiniz : "))
+# six_month_rise = float(input("6 Ayda Bir Ne Kadar Zam Alıyor Olacaksınız : "))
 
-# annual_sallary = float(150000)
-# total_cost = float(1000000)
-# portion_saved = float(0.25)
+annual_sallary = float(120000)
+total_cost = float(500000)
+portion_saved = float(0.05)
+six_month_rise = float(0.03)
 
 r = 0.04
 portion_down_payment = total_cost * 0.25
@@ -19,6 +21,9 @@ while 1 > 0:
     additional_saving = temp_current_saving * r / 12
 
     current_savings = temp_current_saving + additional_saving
+
+    if month % 6 == 0:
+        annual_sallary = annual_sallary + (annual_sallary * six_month_rise)
 
     print("{0}. Ay Birikim Miktarı : ₺{1} ".format(month, current_savings))
 
