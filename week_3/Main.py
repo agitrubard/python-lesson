@@ -3,10 +3,12 @@
 # portion_saved = float(input("Maaşınızın Ne Kadarlık Kısmını Biriktireceksiniz : "))
 # six_month_rise = float(input("6 Ayda Bir Ne Kadar Zam Alıyor Olacaksınız : "))
 
-annual_sallary = float(120000)
-total_cost = float(500000)
+annual_sallary = float(75000)
+total_cost = float(1500000)
 portion_saved = float(0.05)
-six_month_rise = float(0.03)
+six_month_rise = float(0.05)
+
+# Bu Değerler Girilince -> 260 ya da 261 Ay Çıkmalı!
 
 r = 0.04
 portion_down_payment = total_cost * 0.25
