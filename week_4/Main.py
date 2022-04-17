@@ -1,23 +1,34 @@
-# SORU : BU EVİ 3 YILDA ALABİLMEMİZ İÇİN
-# BİR AYDA NE KADAR PARA BİRİKTİRMEMİZ GEREKİYOR
+# SORU : Bu sınıf uygulamasında 3 yıl içinde gerekli peşinatı biriktirmek için paranızın ne kadarını
+# biriktirmeniz gerektiğinizi bulunuz. Gecen hafta yaptığınız Pyhton Sınıf Uygulaması 3
+# programınızı aşağıdaki şekilde modifiyeli ediniz:
+# 1. 6 aylık maaş artışını %7 olarak kabul ediniz.
+# 2. Mevduat hesabınızın getirisi %4
+# 3. Biriktirmeniz gereken miktar ev fiyatınızın %25’i.
+# 4. Evin toplam maliyeti 1 milyon TL
+# 3 yıl içinde gereken peşinatı biriktirmeniz için hangi oranda maaşınızdan para ayırmanız
+# gerektiğini bulunuz.
 
 # annual_sallary = float(input("Yıllık Maaşınızı Yazınız : ₺"))
-# total_cost = float(input("Hayalinizdeki Evin Değerini Giriniz : ₺"))
-# portion_saved = float(input("Maaşınızın Ne Kadarlık Kısmını Biriktireceksiniz : "))
-# six_month_rise = float(input("6 Ayda Bir Ne Kadar Zam Alıyor Olacaksınız : "))
 
-annual_sallary = float(120000)
-total_cost = float(500000)
-portion_saved = float(0.05)
-six_month_rise = float(0.03)
+# 150000
+# 0.4411
+# 12 adım
+# 300.000 , 0.2206 , 9 adımda bulacak
+
+annual_sallary = float(300000)
+total_cost = float(1000000)
+six_month_rise = float(0.07)
 
 r = 0.04
 portion_down_payment = total_cost * 0.25
 current_savings = 0
 
 month = 1
+year = 3
+total_month = year * 12 + 2
+month_saving = portion_down_payment / total_month
 while 1 > 0:
-    saved = (annual_sallary / 12) * portion_saved
+    saved = month_saving
 
     temp_current_saving = current_savings + saved
 
@@ -25,20 +36,14 @@ while 1 > 0:
 
     current_savings = temp_current_saving + additional_saving
 
-    if month % 6 == 0:
-        annual_sallary = annual_sallary + (annual_sallary * six_month_rise)
-
     print("{0}. Ay Birikim Miktarı : ₺{1} ".format(month, current_savings))
 
     if current_savings >= portion_down_payment:
-        print("\nBu Evi Alabilmeniz İçin {} Ay Para Biriktirmelisiniz.".format(month))
-        year = month / 12
-        print("Bu Evi Alabilmeniz İçin {} Yıl Para Biriktirmelisiniz.".format(year))
+        percent = (month_saving * 100) / (current_savings / month)
+        print("\n₺{0} Tutarındaki Evi 3 Yılda Alabilmeniz için Aylık Maaşınızın Yüzde %{1} Kısmını Biriktirmelisiniz.".format((int(total_cost)), (int(percent))))
         break
 
-    month += 1
+    if month % 6 == 0:
+        annual_sallary = annual_sallary + (annual_sallary * six_month_rise)
 
-year = 3
-total_month = year * 12
-month_saving = portion_down_payment / total_month
-print("\nBu Evi 3 Yılda Alabilmeniz İçin Aylık Biriktirmeniz Gereken Miktar : ₺{}".format(month_saving))
+    month += 1
