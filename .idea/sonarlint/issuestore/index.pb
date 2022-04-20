@@ -1,7 +1,11 @@
 
->
-week_1/Main.py,1/5/15ed0a81c8000503c6adb2164b4af0e3c39dc57a
-?
-week_2/Main2.py,7/2/726d18c83bf147622e9cbc4442931369f819ab20
->
-week_2/Main.py,1/1/112f61ec4df2ca745c703fe6663e8c48e5cb89f4
+E
+school/week_4/Main.py,a/5/a587dc5e41480967c1a94536a2f6123b40452db0
+E
+school/week_1/Main.py,d/9/d9c8c0aefa62e13001f0ecfc2a14c9ab18c8c7ad
+E
+school/week_2/Main.py,1/0/100d893b6ce39019249694aecb411cbc54263388
+F
+school/week_2/Main2.py,3/d/3dd3445920612f226d34c88efb8db550aea8311b
+E
+personal/Developer.py,3/d/3da13ecbea7ae4a792cc4d469652501b7b208a14
