@@ -2,14 +2,8 @@ import numpy
 
 # Inputs
 x = [4, 15]
-x1 = x[0]
-x2 = x[1]
-
 # Weights
 w = [0, 1]
-w1 = w[0]
-w2 = w[1]
-
 # Bias
 b = 0
 
@@ -19,7 +13,10 @@ def sigmoid_function(a):
     return 1 / (1 + numpy.exp(-a))
 
 
-f = b + w1 * x1 + w2 * x2
+f = b
+i = 0
+for i in range(len(x)):
+    f += w[i] * x[i]
 
 print("fnet = {}".format(f))
 
